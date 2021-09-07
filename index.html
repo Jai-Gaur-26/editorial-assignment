@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pepcoding</title>
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="boxstyle.css"> <!-- ye sheet add krle-->
+</head>
+<body>
+
+    <input type="checkbox" id="nav-toggle">
+    <div class="sidebar">
+        <div class="sidebar-logo">
+            <h2><span class="pepLogo"></span> <span>Pepcoding</span></h2>
+        </div>
+        <div class="sidebar-menu">
+            <ul>
+                <li>
+                    <a href="https://www.pepcoding.com/resources/online-java-foundation/function-and-arrays/sum-of-two-arrays-official/ojquestion" class="active"><i class="las la-chevron-circle-right"></i>
+                    <span>Sum Of Two Arrays</span></a>
+                </li>
+                <li>
+                    <a href=""><i class="las la-chevron-circle-right"></i>
+                    <span>Difference Of Two Arrays</span></a>
+                </li>
+                <li>
+                    <a href=""><i class="las la-chevron-circle-right"></i>
+                    <span>Reverse An Array</span></a>
+                </li>
+                <li>
+                    <a href=""><i class="las la-chevron-circle-right"></i>
+                    <span>Inverse Of An Array</span></a>
+                </li>
+                <li>
+                    <a href=""><i class="las la-chevron-circle-right"></i>
+                    <span>SubArray Problem</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div>
+            <header>
+            <div class="flex">
+                <div>
+                    <h2>
+                        <label for="nav-toggle">
+                            <span class="las la-bars" style="cursor:pointer"></span>
+                        </label>
+                        <a href="https://www.pepcoding.com/resources/online-java-foundation/function-and-arrays/sum-of-two-arrays-official/ojquestion">Sum Of 2 Arrays </a>
+                    </h2>
+                </div>
+                <div class="search-wrapper">
+                    <span class="las la-search" style="font-size: 40px;"></span>
+                    <input type="search" placeholder="Search here" />
+                </div>
+                <div class="user-wrapper">
+                    <img src="userimg.png" width="40px" height="40px" alt="">
+                    <div>
+                        <h4>Jai Gaur</h4>
+                        <small>Signed in</small>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- <header>
+            <h2>
+                <label for="nav-toggle">
+                    <span class="las la-bars"></span>
+                </label>
+                <a href="https://www.pepcoding.com/resources/online-java-foundation/function-and-arrays/sum-of-two-arrays-official/ojquestion">Sum Of 2 Arrays </a>
+            </h2>
+            <div class="search-wrapper">
+                <span class="las la-search" style="font-size: 40px;"></span>
+                <input type="search" placeholder="Search here" />
+            </div>
+            <div class="user-wrapper">
+                <img src="userimg.png" width="40px" height="40px" alt="">
+                <div>
+                    <h4>Jai Gaur</h4>
+                    <small>Signed in</small>
+                </div>
+            </div>
+        </header> -->
+        <main> <!--This is the part except sidebar and header. -->
+            <i class="quote">"Life is full of risks anyway; why not take them?"</i>
+            <br>
+            <div class="article-title">
+                <b>SUM OF 2 ARRAYS</b>
+            </div>
+            <p>Hey coder ! We are here to help you and be your coding buddy. Let’s go
+                through the step by step explanation of this question together. This is going
+                to be one hell of a ride!
+            </p> <br>
+            <div style="font-size: 38px; text-align: center; font-weight: bolder;"><i>Problem Discussion:</i></div>
+            <div>
+                Let us guide you through the given problem.
+                You are given 2 numbers in the form of arrays.
+                Now we know what mischief must be cooking in your mind. <div class="problem-discussion-yellow">No, converting
+                arrays into numbers and adding them is not possible as the length of arrays
+                can be very lengthy.</div><br>
+                Reader, suppose we are given the following input : 31075 and 111111 , then
+                notice the places of the digits when adding :
+            </div><br> 
+            <img src="Figure1.png" alt="" class="Fig1"> <br>
+            <p>We also suggest you watch the question video to understand it better.</p> <br>
+            
+            <iframe src="https://www.youtube.com/embed/aSb29e8OoZs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: 10px;"></iframe> <br> <br>
+            
+            <div style="font-size: 38px; text-align: center; font-weight: bolder;"><u><i>Approach:</i></u></div>
+            <div>For the explanation we take the two numbers as 93468 and 1988 .We declare a
+                new array (say sum[ ]) whose length is the larger of the two input array
+                lengths.
+            </div>
+            <img src="Figure2.png" alt="" class="Fig1"> <br>
+            <div>We put pointers i, j and k and the last place of all the arrays. <br>
+                In the first iteration, we add the values at i and j and store (i + j) %10 in k.
+                Then we take (i + j) / 10 in carry (denoted by ‘c’) and decrease i , j and k by
+                one place for all the subsequent iterations as follows:
+            </div>
+            <img src="Figure3.png" alt="" class="Fig1"> <br>
+            <div>When j pointer reaches -1 position , we add only value at i and value of carry
+                and store it in the kth position of the sum array. <br>
+                Now reader, in case the carry at last position of i (i.e at 9) was 1 , then the sum
+                would have been 10. So, in such a case we print ‘1’ by itself, store ‘0’ at kth
+                position and then print the entire sum array. <br>
+                We highly recommend you to refer to Youtube video Sum of
+                two arrays[0:46- 3:19] for detailed explanation .
+            </div> <br>
+            <iframe frameBorder="0" src="https://www.youtube.com/embed/BzJK1zNXwcU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: 10px;"></iframe> <br> <br>
+            <div style="font-size: 38px; text-align: center; font-weight: bolder;"><u><i>Source Code:</i></u></div> <br>
+<!--box ka code yahan se shuru hai-->
+
+<div class="flex">
+    <div class="codeheader" id="codeheader_css">Java Code</div>
+    <button>Run</button>
+</div>
+<div id="codebox">
+<pre><code data-language="css">
+import java.io.*;
+import java.util.*;
+
+public class Main {
+
+public static void main(String[] args) throws Exception {
+Scanner scn = new Scanner(System.in);
+int n1 = scn.nextInt();
+int[] a1 = new int[n1];
+for (int i = 0; i < n1; i++) {
+    a1[i] = scn.nextInt();
+}
+
+int n2 = scn.nextInt();
+int[] a2 = new int[n2];
+for (int i = 0; i < n2; i++) {
+    a2[i] = scn.nextInt();
+}
+int n;
+if (n1 > n2) {
+    n = n1;
+} else {
+    n = n2;
+}
+int i = n1 - 1, j = n2 - 1;
+int[] sum = new int[n];
+int carry = 0; //1
+int k = n - 1; //2
+while (k >= 0) {
+    int d = carry; //3
+    if (i >= 0) { //4
+        d += a1[i];
+    }
+    if (j >= 0) { //5
+        d += a2[j];
+    }
+    carry = d / 10; //6
+    d = d % 10; //7
+
+    sum[k] = d; //8
+    i--;
+    j--; //9
+    k--;
+}
+if (carry != 0) {
+    System.out.print(carry);
+}
+for (int y = 0; y < n; y++) {
+    System.out.println(sum[y]);
+}
+}
+
+}
+
+</code></pre>
+</div>
+<!-- yaha tak h code ka box-->
+            <div style="font-size: 38px; text-align: center; font-weight: bolder;"><u><i>Time & Space Complexity:</i></u></div>
+            <div class="time-and-space">
+                <ol>
+                    <li><i>Time Complexity: O(n)</i></li>
+                    <p style="padding-left: 30px;">This time complexity is linear because for and while loops are used.</p> <br>
+                    <li><i>Space Complexity: O(n)</i></li>
+                    <p style="padding-left: 30px;">As a 1D array is used in the code, therefore space complexity is constant. <br> <br></p>
+                </ol>
+                
+            </div>
+            <div style="font-size: 38px; text-align: center; font-weight: bolder;"><u><i>Analysis:</i></u> </div>
+                <div>
+                    Your patience has been much valued. Let’s discuss the “WHY” aspect of this
+                    question now. <br>
+    
+                    Be attentive ! The most important part of this article awaits you. <br> <br>
+
+                    <ul>
+                        <li>1  Initial value of carry is kept 0 and it changes in each iteration.</li>
+                        <li>2  We iterate this code for k&gt;=0 so that all positions of sum[ ] are filled.</li>
+                        <li>3  Reader, here, ‘d ‘ denotes the digit which is to be placed at kth position in
+                            sum[ ]. We initialize it with the value stored in carry.</li>
+                        <li>4  If i is at a non-negative position (i.e some part of the number is still left to
+                            be added) then the value at i is added to the previous value of ‘d’.</li>
+                        <li>5  Similarly, if j is non-negative then the value of j is also added to the
+                            previous value of ‘d’.</li>
+                        <li>6  As discussed previously , carry is updated as carry=d/10 and stores the
+                            ten’s place value of ‘d’ .</li>
+                        <li>7  Also the digit, ‘d’ is updated to d=d%10 to store the one’s place value of
+                            ‘d’.</li>
+                        <li>8  You need to store ‘d’ in the kth position of the sum[ ] array now.</li>
+                        <li>9  At last , decrement the values of i , j and k .</li>
+                    </ul> <br>
+                    We can’t stress you enough to refer to the Youtube video
+                    [5:30 -9:20]. <br> <br>
+                    <iframe src="https://www.youtube.com/embed/BzJK1zNXwcU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div> <br>
+
+                <div class="flex">
+                    <div class="last-div-left">Problem Tag: 1D Arrays</div>
+                    <div class="last-div-right">Author: Shreeya Gupta</div>
+                </div>
+
+        </main>
+    </div>
+</body>
+</html>
